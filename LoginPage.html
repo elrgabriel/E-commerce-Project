@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página de Login</title>
+    <link rel="stylesheet" href="LoginPage.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap"
+      rel="stylesheet"
+    />
+</head>
+<body>
+    <!--Header já feito pelo Euller-->
+    <header class="header">
+        <div>
+            <img class="logo" src="./assets/music-logo.svg" alt="Website logo" height="150px" />
+        </div>
+        <nav class="navbar">
+            <a href="#">Home</a>
+            <a href="#">Categoria X</a>
+            <a href="#">Categoria Y</a>
+            <a href="#">Categoria Z</a>
+            <a href="#">Carrinho</a>
+            <a href="#">Login</a>
+        </nav>
+    </header>
+
+    <!--Container do Login-->
+    <div class="container">
+        <!--card do login-->
+        <div class="login-card">
+            <h2>Bem-vindo!</h2>
+            <form>
+                <div class="form-group">
+                    <label>Email</label>
+                    <input type="email" required>
+                </div>
+                <div class="form-group">
+                    <label>Palavra-Passe</label>
+                    <input type="password" required>
+                </div>
+                <!--Esqueceu sua senha e recuparar no Footer do card do login -->
+                <button class="button" type="submit">Entrar</button>
+                <div class="form-footer">
+                    <a href="#">Esqueceu sua senha?</a>
+                    <p>Não tem uma conta? <a href="#">Registre-se</a></p>
+                </div>
+            </form>
+        </div>
+    </div>
+<!--Footer já feito pelo Euller-->
+    <footer class="footer">
+        <div class="footer-start">
+            <p>Copyright All Rights Reserved</p>
+            <p><a href="#">Terms of Use</a> / <a href="#">Privacy Policy</a></p>
+        </div>
+        <div class="footer-end">
+            <img src="./assets/facebook_icon.svg" alt="facebook logo" height="20px" />
+            <img src="./assets/twitter_icon.svg" alt="twitter logo" height="20px" />
+            <img src="./assets/instagram_icon.svg" alt="instagram logo" height="20px" />
+            <img src="./assets/linkedin_icon.svg" alt="linkedin logo" height="20px" />
+            <img src="./assets/pinterest_icon.svg" alt="pinterest logo" height="20px" />
+            <img src="./assets/google_icon.svg" alt="google logo" height="20px" />
+        </div>
+    </footer>
+</body>
+</html>
