@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="ProfilePage.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    
     <link
       href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap"
       rel="stylesheet"
@@ -30,78 +31,33 @@
 
     <div class="container">
         <div class="register-card">
-            <h2>Atualizar dados</h2>
+            <h2>Seus Dados</h2>
             <form>
                 <div class="form-group">
                     <label>Nome</label>
-                    <input type="text" required> <!--Input nome-->
+                    <label>Fábio</label>
                 </div>
                 <div class="form-group">
                     <label>Apelido</label>
-                    <input type="text" required> <!--Input apelido-->
+                    <label>Caça Ratos</label>
                 </div>
                 <div class="form-group">
-                    <label>Novo Email</label>
-                    <input type="email" required> <!--Input email-->
-                </div>
-                <div class="form-group">
-                    <label>Confirmação Email</label>
-                    <input type="email" required> <!--Input email-->
-                </div>
-                <div class="form-group">
-                    <label>Nova palavra Palavra-Passe</label>
-                    <input type="password" required> <!--Input palavra-Passe-->
-                </div>
-                <div class="form-group">
-                    <label>Confirmação da Palavra-Passe</label> <!--Input Confirmar a palavra passe-->
-                    <input type="password" required>
+                    <label>Email</label>
+                    <label>fabiomousehunter@gmail.com</label>
                 </div>
                 <div class="form-group">
                     <label>Morada</label>
-                    <input type="text" required> <!--Input Endereço-->
+                    <label>Rua. António Peran Nº1200 Ap.17</label>
                 </div>
-                <!--Aqui usei para fazer o input com lista dos Distritos para  o usuário selecionar-->
-                <!--Nomes dos Distritos pedi para o GPT-->
                 <div class="form-group">
-                    <label for="estado">Distrito</label>
-                    <select id="Distrito" name="estado" required>
-                        <option value="">Selecione o Distrito</option>
-                        <option value="Aveiro">Aveiro</option>
-                        <option value="Beja">Beja</option>
-                        <option value="Braga">Braga</option>
-                        <option value="Bragança">Bragança</option>
-                        <option value="Castelo Branco">Castelo Branco</option>
-                        <option value="Coimbra">Coimbra</option>
-                        <option value="Évora">Évora</option>
-                        <option value="Faro">Faro</option>
-                        <option value="Guarda">Guarda</option>
-                        <option value="Leiria">Leiria</option>
-                        <option value="Lisboa">Lisboa</option>
-                        <option value="Portalegre">Portalegre</option>
-                        <option value="Porto">Porto</option>
-                        <option value="Santarém">Santarém</option>
-                        <option value="Setúbal">Setúbal</option>
-                        <option value="Viana do Castelo">Viana do Castelo</option>
-                        <option value="Vila Real">Vila Real</option>
-                        <option value="Viseu">Viseu</option>
-                        <option value="Açores">Região dos Açores</option>
-                        <option value="Madeira">Região da Madeira</option>
-                    </select>
-                </div>
-                <!--CheckBox para aceitar politicas de privacidades-->
-                <div class="form-group checkbox-group">
-                    <label><input type="checkbox" required> Aceito a política de privacidade</label>
-                </div>
-                <div class="form-group checkbox-group">
-                    <label><input type="checkbox" required> Inscrever-se em nossa Newsletter</label>
+                    <label>Distrito</label>
+                    <label>Lisboa</label>
                 </div>
                 <!--Aqui teve que ser GPT pq eu não fazia ideia do design disso aqui-->
-                <button class="button" type="submit">Aceitar</button>
+                <button class="button" type="submit">Registrar</button>
                 <!--Aqui teve que ser GPT pq eu não fazia ideia do design disso aqui-->
                 <div class="form-footer">
-                    <p>Voltar a pagina principal
-                        
-                        <a href="#">Faça login</a></p> <!--Campo caso o usuário já tenha conta-->
+                    <p>Voltar a <a href="index.html"> Home</a></p> <!--Campo caso o usuário já tenha conta-->
                 </div>
             </form>
         </div>

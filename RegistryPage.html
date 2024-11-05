@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<!--Pagina para atualização de dados usuário-->
 <html lang="pt">
 <head>
     <meta charset="UTF-8">
@@ -19,48 +20,88 @@
             <img class="logo" src="./assets/music-logo.svg" alt="Website logo" height="150px" />
         </div>
         <nav class="navbar">
-            <a href="#">Home</a>
-            <a href="#">Categoria X</a>
-            <a href="#">Categoria Y</a>
-            <a href="#">Categoria Z</a>
+            <a href="index.html">Home</a>
+            <a href="404.html">Categoria X</a>
+            <a href="404.html">Categoria Y</a>
+            <a href="404.html">Categoria Z</a>
             <a href="#">Carrinho</a>
-            <a href="#">Login</a>
+            <a href="LoginPage.html">Login</a>
         </nav>
     </header>
 
     <div class="container">
         <div class="register-card">
-            <h2>Criar uma Conta</h2>
+            <h2>Seus dados</h2>
             <form>
                 <div class="form-group">
                     <label>Nome</label>
-                    <input type="text" required> <!--Input nome-->
+                    <input type="text"> <!--Input nome-->
                 </div>
                 <div class="form-group">
                     <label>Apelido</label>
-                    <input type="text" required> <!--Input apelido-->
+                    <input type="text"> <!--Input apelido-->
                 </div>
                 <div class="form-group">
                     <label>Email</label>
-                    <input type="email" required> <!--Input email-->
+                    <input type="email"> <!--Input email-->
+                </div>
+                <div class="form-group">
+                    <label>Confirmação Email</label>
+                    <input type="email"> <!--Input email-->
                 </div>
                 <div class="form-group">
                     <label>Palavra-Passe</label>
-                    <input type="password" required> <!--Input palavra-Passe-->
+                    <input type="password"> <!--Input palavra-Passe-->
                 </div>
                 <div class="form-group">
                     <label>Confirmação da Palavra-Passe</label> <!--Input Confirmar a palavra passe-->
-                    <input type="password" required>
+                    <input type="password">
+                </div>
+                <div class="form-group">
+                    <label>Morada</label>
+                    <input type="text"> <!--Input Endereço-->
+                </div>
+                <!--Aqui usei para fazer o input com lista dos Distritos para  o usuário selecionar-->
+                <!--Nomes dos Distritos pedi para o GPT, não teve jeito-->
+                <div class="form-group">
+                    <label for="estado">Distrito</label>
+                    <select id="Distrito" name="estado">
+                        <option value="">Selecione o Distrito</option>
+                        <option value="Aveiro">Aveiro</option>
+                        <option value="Beja">Beja</option>
+                        <option value="Braga">Braga</option>
+                        <option value="Bragança">Bragança</option>
+                        <option value="Castelo Branco">Castelo Branco</option>
+                        <option value="Coimbra">Coimbra</option>
+                        <option value="Évora">Évora</option>
+                        <option value="Faro">Faro</option>
+                        <option value="Guarda">Guarda</option>
+                        <option value="Leiria">Leiria</option>
+                        <option value="Lisboa">Lisboa</option>
+                        <option value="Portalegre">Portalegre</option>
+                        <option value="Porto">Porto</option>
+                        <option value="Santarém">Santarém</option>
+                        <option value="Setúbal">Setúbal</option>
+                        <option value="Viana do Castelo">Viana do Castelo</option>
+                        <option value="Vila Real">Vila Real</option>
+                        <option value="Viseu">Viseu</option>
+                        <option value="Açores">Região dos Açores</option>
+                        <option value="Madeira">Região da Madeira</option>
+                    </select>
                 </div>
                 <!--CheckBox para aceitar politicas de privacidades-->
                 <div class="form-group checkbox-group">
-                    <label><input type="checkbox" required> Aceito a política de privacidade</label>
+                    <label><input type="checkbox"> Aceito a política de privacidade</label>
                 </div>
-                <!--Aqui teve que ser GPT pq eu não fazia ideia do design disso aqui-->
-                <button class="button" type="submit">Registrar</button>
-                <!--Aqui teve que ser GPT pq eu não fazia ideia do design disso aqui-->
+                <div class="form-group checkbox-group">
+                    <label><input type="checkbox"> Inscrever-se em nossa Newsletter</label>
+                </div>
+                <form action="RegistryPage.html" method="get">
+                    <button class="button" type="submit">Aceitar</button>
+                </form>
                 <div class="form-footer">
-                    <p>Já tem uma conta? <a href="#">Faça login</a></p> <!--Campo caso o usuário já tenha conta-->
+                    <p>Voltar a pagina principal
+                        <a href="LoginPage.html">Faça login</a></p> <!--Campo caso o usuário já tenha conta-->
                 </div>
             </form>
         </div>

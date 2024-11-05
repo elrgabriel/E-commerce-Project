@@ -1,5 +1,7 @@
 * {
     box-sizing: border-box;
+    padding: 0px;
+    margin: 0px;
 }
 
 html {
@@ -114,14 +116,14 @@ body {
 .button:hover {
     background-color: #a79344;
 }
-
+/*Aqui teve que ser GPT pq eu não fazia ideia do design disso aqui*/
 .checkbox-group {
     display: flex;
     flex-direction: column;
     align-items: start;
     margin-top: 10px;
 }
-
+/*Aqui teve que ser GPT pq eu não fazia ideia do design disso aqui*/
 .checkbox-group label {
     font-size: 0.85em;
     color: #555;
