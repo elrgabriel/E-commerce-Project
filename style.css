@@ -39,6 +39,7 @@ html {
 
 .main-content {
   margin-top: 150px;
+  padding-bottom: 10px;
   width: 100%;
   height: fit-content;
   display: flex;
@@ -65,6 +66,11 @@ html {
 .item-info-container {
   width: 100%;
   height: 50px;
+  text-decoration: none;
+}
+.item-info-container a{
+  color: black;
+  text-decoration: none;
 }
 .item-name-container {
   background-color: white;
@@ -73,6 +79,9 @@ html {
   padding: 3px;
   padding-left: 5px;
   text-align: start;
+}
+.item-name-container a{
+  color: black;
 }
 .item-price-container {
   background-color: white;
