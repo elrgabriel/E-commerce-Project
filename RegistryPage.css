@@ -99,6 +99,12 @@ body {
     border: 1px solid #ddd;
     font-size: 0.9em;
 }
+.form-group label {
+    font-size: 0.9em;
+    color: #555;
+    display: block;
+    margin-bottom: 5px;
+}
 
 .button {
     width: 100%;
@@ -116,6 +122,15 @@ body {
 .button:hover {
     background-color: #a79344;
 }
+
+.form-group select {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 0.9em;
+    background-color: white;
+    color: #888585; }
 
 .checkbox-group {
     display: flex;
