@@ -1,0 +1,30 @@
+{% extends "base.html" %} {% block head %}
+<link
+  rel="stylesheet"
+  href="{{url_for('static', filename = 'css/style.css')}}"
+/>
+{% endblock %} {% block content %}
+
+<div class="main-content">
+  {% for item in items %}
+  <div class="content-item">
+    <div class="item-img-container">
+      <a href="./ProductSingle.html"
+        ><img
+          class="item-img"
+          src="{{url_for('static', filename = item.image)}}"
+      /></a>
+    </div>
+    <div class="item-info-container">
+      <div class="item-name-container">
+        <a href="./ProductSingle.html">{{item.name}}</a>
+      </div>
+      <div class="item-price-container">
+        <a href="./ProductSingle.html">${{item.price}}</a>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+
+{% endblock %}
