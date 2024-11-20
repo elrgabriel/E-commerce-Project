@@ -1,78 +1,78 @@
 items = [
     {
-        "name": "drumkit",
+        "name": "Bateria Pearl Performance P5500",
         "image": "images/drumKit.png",
-        "price": 500
+        "price": 1289.00
     },
      {
-        "name": "drumkit",
+        "name": "Bateria Pearl Performance P5500",
         "image": "images/drumKit.png",
-        "price": 500
+        "price": 1289.00
     },
      {
-        "name": "drumkit",
+        "name": "Bateria Pearl Performance P5500",
         "image": "images/drumKit.png",
-        "price": 500
+        "price": 1289.00
     },
      {
-        "name": "drumkit",
+        "name": "Bateria Pearl Performance P5500",
         "image": "images/drumKit.png",
-        "price": 500
+        "price": 1289.00
     },
      {
-        "name": "drumkit",
+        "name": "Bateria Pearl Performance P5500",
         "image": "images/drumKit.png",
-        "price": 500
+        "price": 1289.00
     },
      {
-        "name": "drumkit",
+        "name": "Bateria Pearl Performance P5500",
         "image": "images/drumKit.png",
-        "price": 500
+        "price": 1289.00
     },
      {
-        "name": "drumkit",
+        "name": "Bateria Pearl Performance P5500",
         "image": "images/drumKit.png",
-        "price": 500
+        "price": 1289.00
     },
      {
-        "name": "drumkit",
+        "name": "Bateria Pearl Performance P5500",
         "image": "images/drumKit.png",
-        "price": 500
+        "price": 1289.00
     },
      {
-        "name": "drumkit",
+        "name": "Bateria Pearl Performance P5500",
         "image": "images/drumKit.png",
-        "price": 500
+        "price": 1289.00
     },
      {
-        "name": "drumkit",
+        "name": "Bateria Pearl Performance P5500",
         "image": "images/drumKit.png",
-        "price": 500
+        "price": 1289.00
     },
      {
-        "name": "drumkit",
+        "name": "Bateria Pearl Performance P5500",
         "image": "images/drumKit.png",
-        "price": 500
+        "price": 1289.00
     },
      {
-        "name": "drumkit",
+        "name": "Bateria Pearl Performance P5500",
         "image": "images/drumKit.png",
-        "price": 500
+        "price": 1289.00
     },
      {
-        "name": "drumkit",
+        "name": "Bateria Pearl Performance P5500",
         "image": "images/drumKit.png",
-        "price": 500
+        "price": 1289.00
     },
      {
-        "name": "drumkit",
+        "name": "Bateria Pearl Performance P5500",
         "image": "images/drumKit.png",
-        "price": 500
+        "price": 1289.00
     },
      {
-        "name": "drumkit",
+        "name": "Bateria Pearl Performance P5500",
         "image": "images/drumKit.png",
-        "price": 500
+        "price": 1289.00
     }
 ]
 

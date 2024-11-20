@@ -13,9 +13,17 @@ def index():
 def error():
     return render_template('404.html')
 
+@app.route('/login')
+def login():
+    return render_template('loginPage.html')
+
+@app.route('/register')
+def register():
+    return render_template('RegistryPage.html')
+
 @app.route('/ProductSingle')
 def product_single():
-    return render_template('ProductSingle.html')
+    return render_template('ProductSingle.html', items = items)
 
 if __name__ == "__main__":
     app.run(debug=True)
