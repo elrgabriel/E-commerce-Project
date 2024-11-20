@@ -13,6 +13,10 @@ def index():
 def error():
     return render_template('404.html')
 
+@app.route('/ProductSingle')
+def product_single():
+    return render_template('ProductSingle.html')
+
 if __name__ == "__main__":
     app.run(debug=True)
 
