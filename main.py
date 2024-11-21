@@ -1,7 +1,12 @@
 from flask import Flask, render_template # type: ignore
+from model import *
 from data import items
 
 app = Flask(__name__)
+app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///ecommerce.db"
+db.init_app(app)
+with app.app_context():
+    db.create_all()
 
 
 @app.route('/')
