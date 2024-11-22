@@ -26,6 +26,10 @@ def login():
 def register():
     return render_template('RegistryPage.html')
 
+@app.route('/ProfilePage')
+def ProfilePage():
+    return render_template('ProfilePage.html')
+
 @app.route('/ProductSingle')
 def product_single():
     return render_template('ProductSingle.html', items = items)

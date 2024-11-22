@@ -1,34 +1,14 @@
-<!DOCTYPE html>
-<html lang="pt">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Página de Registro</title>
-    <link rel="stylesheet" href="ProfilePage.css" />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    
-    <link
-      href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap"
-      rel="stylesheet"
-    />
-</head>
-<!--Pré feito pelo Euller, ainda bem.-->
-<body>
-    <header class="header">
-        <div>
-            <img class="logo" src="./assets/music-logo.svg" alt="Website logo" height="150px" />
-        </div>
-        <nav class="navbar">
-            <a href="index.html">Home</a>
-            <a href="404.html">Categoria X</a>
-            <a href="404.html">Categoria Y</a>
-            <a href="404.html">Categoria Z</a>
-            <a href="CartPage.html">Carrinho</a>
-            <a href="LoginPage.html">Login</a>
-        </nav>
-    </header>
 
+    {%extends "base.html"%}
+
+    {%block head%}
+    <link
+  rel="stylesheet"
+  href="{{url_for('static', filename = 'css/ProfilePage.css')}}"
+/>
+    {%endblock%}
+    
+    {% block content %}
     <div class="container">
         <div class="register-card">
             <h2>Seus Dados</h2>
@@ -62,22 +42,6 @@
             </form>
         </div>
     </div>
-  <!--Pré feito pelo Euller, ainda bem.-->
-    <footer class="footer">
-        <!--Não sei o que ele fez, mas esse footer não fica certo no meu, e vai ficar assim.-->
-        <div class="footer-start">
-            <p>Copyright All Rights Reserved</p>
-            <p><a href="404.html">Terms of Use</a> / <a href="404.html">Privacy Policy</a></p>
-        </div>
-        <div class="footer-end">
-            <img src="./assets/facebook_icon.svg" alt="facebook logo" height="20px" />
-            <img src="./assets/twitter_icon.svg" alt="twitter logo" height="20px" />
-            <img src="./assets/instagram_icon.svg" alt="instagram logo" height="20px" />
-            <img src="./assets/linkedin_icon.svg" alt="linkedin logo" height="20px" />
-            <img src="./assets/pinterest_icon.svg" alt="pinterest logo" height="20px" />
-            <img src="./assets/google_icon.svg" alt="google logo" height="20px" />
-        </div>
-    </footer>
-    <!--Pré feito pelo Euller, ainda bem.-->
-</body>
-</html>
+    {% endblock %}
+ 
+  
