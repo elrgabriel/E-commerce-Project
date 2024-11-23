@@ -7,47 +7,47 @@
 <div class="container">
   <div class="register-card">
     <h2>Seus dados</h2>
-    <form>
+    <form action="#" method="post">
       <div class="form-group">
         <label>Nome</label>
-        <input type="text" />
+        <input type="text" name="register_nome" required />
         <!--Input nome-->
       </div>
       <div class="form-group">
         <label>Apelido</label>
-        <input type="text" />
+        <input type="text" name="register_apelido" />
         <!--Input apelido-->
       </div>
       <div class="form-group">
         <label>Email</label>
-        <input type="email" />
+        <input type="email" name="register_email" required />
         <!--Input email-->
       </div>
       <div class="form-group">
         <label>Confirmação Email</label>
-        <input type="email" />
+        <input type="email" name="register_re_email" required />
         <!--Input email-->
       </div>
       <div class="form-group">
         <label>Palavra-Passe</label>
-        <input type="password" />
+        <input type="password" name="register_password" required />
         <!--Input palavra-Passe-->
       </div>
       <div class="form-group">
         <label>Confirmação da Palavra-Passe</label>
         <!--Input Confirmar a palavra passe-->
-        <input type="password" />
+        <input type="password" name="register_re_password" required />
       </div>
       <div class="form-group">
         <label>Morada</label>
-        <input type="text" />
+        <input type="text" name="register_morada" />
         <!--Input Endereço-->
       </div>
       <!--Aqui usei para fazer o input com lista dos Distritos para  o usuário selecionar-->
       <!--Nomes dos Distritos pedi para o GPT, não teve jeito-->
       <div class="form-group">
         <label for="estado">Distrito</label>
-        <select id="Distrito" name="estado">
+        <select id="Distrito" name="register_distrito">
           <option value="">Selecione o Distrito</option>
           <option value="Aveiro">Aveiro</option>
           <option value="Beja">Beja</option>
@@ -83,7 +83,7 @@
         >
       </div>
       <a href="ProfilePage.html"
-        ><input class="button" type="button" value="Registrar"
+        ><input class="button" type="submit" value="Registrar"
       /></a>
       <div class="form-footer">
         <p>Voltar a pagina principal <a href="/home">Aqui</a></p>
