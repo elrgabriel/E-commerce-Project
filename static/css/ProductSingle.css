@@ -72,6 +72,7 @@ html {
 .product-tag p {
   font-size: 2rem;
   color: #cc5505;
+  display: flex;
 }
 .purchase-details p {
   font-size: 1.2rem;
