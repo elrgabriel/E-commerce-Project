@@ -8,18 +8,22 @@
   {% for item in items %}
   <div class="content-item">
     <div class="item-img-container">
-      <a href="/ProductSingle"
+      <a href="{{url_for('product_single', product_id = item.id)}}"
         ><img
           class="item-img"
-          src="{{url_for('static', filename = item.image)}}"
+          src="{{url_for('static', filename = item.product_image)}}"
       /></a>
     </div>
     <div class="item-info-container">
       <div class="item-name-container">
-        <a href="/ProductSingle">{{item.name}}</a>
+        <a href="{{url_for('product_single', product_id = item.id)}}"
+          >{{item.product_name}}</a
+        >
       </div>
       <div class="item-price-container">
-        <a href="/ProductSingle">€{{item.price}}</a>
+        <a href="{{url_for('product_single', product_id = item.id)}}"
+          >€{{item.product_price}}</a
+        >
       </div>
     </div>
   </div>

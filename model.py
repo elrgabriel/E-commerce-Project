@@ -16,3 +16,9 @@ class Users(db.Model):
     user_last_name = db.Column(db.String(30))
     user_address = db.Column(db.String(60))
     user_district = db.Column(db.String(20))
+
+class Products(db.Model):
+    id = db.Column(db.Integer, primary_key = True)
+    product_name = db.Column(db.String(70), nullable = False)
+    product_price = db.Column(db.Integer, nullable = False)
+    product_image = db.Column(db.String(100), nullable = False)

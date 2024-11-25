@@ -10,15 +10,15 @@
   <div class="product-main-content"></div>
   <div class="product-container">
     <div class="product-img-container">
-      <img src="{{url_for('static', filename = 'images/drumkit.png')}}" />
+      <img src="{{url_for('static', filename = item.product_image)}}" />
     </div>
     <div class="product-info-container">
       <div class="product-tag">
-        <p>Bateria Pearl Performance P5500</p>
-        <p>€ 1289.00</p>
+        <p>{{item.product_name}}</p>
+        <p>€ {{item.product_price}}</p>
       </div>
       <div class="purchase-details">
-        <p>ID: 999999</p>
+        <p>ID: {{item.id}}</p>
         <p>Produto em Stock</p>
         <p>Envio Grátis</p>
       </div>

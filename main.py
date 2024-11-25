@@ -1,6 +1,6 @@
 from flask import Flask, render_template, request,redirect,url_for, flash # type: ignore
 from model import *
-from data import items
+
 
 app = Flask(__name__)
 app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///ecommerce.db"
@@ -9,10 +9,12 @@ with app.app_context():
         db.create_all()
 
 
+
 @app.route('/')
 @app.route('/home')
 def index():
-    return render_template('index.html', items = items)
+    products = Products.query.all()
+    return render_template('index.html', items = products)
 
 @app.route('/404')
 def error():
@@ -80,9 +82,12 @@ def register():
 def ProfilePage():
     return render_template('ProfilePage.html')
 
-@app.route('/ProductSingle')
-def product_single():
-    return render_template('ProductSingle.html', items = items)
+@app.route('/ProductSingle/<int:product_id>')
+def product_single(product_id):
+    product = Products.query.get_or_404(product_id) 
+    return render_template('ProductSingle.html', item = product)
+
+
 
 if __name__ == "__main__":
     
