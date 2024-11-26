@@ -1,82 +1,86 @@
-{%extends "base.html"%}
-
-{%block head%}
+{%extends "base.html"%} {%block head%}
 <link
-rel="stylesheet"
-href="{{url_for('static', filename = 'css/ProfilePage.css')}}"
+  rel="stylesheet"
+  href="{{url_for('static', filename = 'css/CompletePurchase.css')}}"
 />
-{%endblock%}
-
-{% block content %}
-    <div class="container">
-        <!-- Card de Login na finalização de compra -->
-        <div class="card">
-            <h2>1 Informações pessoais</h2>
-            <form>
-                <div class="form-group">
-                    <h3>Criar uma conta  |  Entrar</h3>
-                    <label>Como gostaria de ser chamado:</label>
-                    <div class="radio-group">
-                        <label><input type="radio" name="titulo" value="senhor"> Senhor</label>
-                        <label><input type="radio" name="titulo" value="senhora"> Senhora</label>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label>Nome Próprio</label>
-                    <input type="text" required>
-                </div>
-                <div class="form-group">
-                    <label>Apelido</label>
-                    <input type="text" required>
-                </div>
-                <div class="form-group">
-                    <label>Email</label>
-                    <input type="email" required>
-                </div>
-                <div class="form-group">
-                    <label>Palavra Passe</label>
-                    <input type="password" required>
-                </div>
-                <div class="form-group">
-                    <label>Confirmação da Palavra Passe</label>
-                    <input type="password" required>
-                </div>
-                <div class="form-group">
-                    <label>Data de Nascimento</label>
-                    <input type="date" required>
-                </div>
-                <div class="form-group checkbox-group">
-                    <label><input type="checkbox"> Gostaria de receber nossa newsletter</label>
-                    <label><input type="checkbox"> Aceito a política de privacidade</label>
-                </div>
-                <button class="button" type="submit">Continuar</button>
-            </form>
+{%endblock%} {% block content %}
+<div class="container">
+  <!-- Card de Login na finalização de compra -->
+  <div class="card">
+    <h2>1 Informações pessoais</h2>
+    <form>
+      <div class="form-group">
+        <h3>Criar uma conta | Entrar</h3>
+        <label>Como gostaria de ser chamado:</label>
+        <div class="radio-group">
+          <label
+            ><input type="radio" name="titulo" value="senhor" /> Senhor</label
+          >
+          <label
+            ><input type="radio" name="titulo" value="senhora" /> Senhora</label
+          >
         </div>
+      </div>
+      <div class="form-group">
+        <label>Nome Próprio</label>
+        <input type="text" required />
+      </div>
+      <div class="form-group">
+        <label>Apelido</label>
+        <input type="text" required />
+      </div>
+      <div class="form-group">
+        <label>Email</label>
+        <input type="email" required />
+      </div>
+      <div class="form-group">
+        <label>Palavra Passe</label>
+        <input type="password" required />
+      </div>
+      <div class="form-group">
+        <label>Confirmação da Palavra Passe</label>
+        <input type="password" required />
+      </div>
+      <div class="form-group">
+        <label>Data de Nascimento</label>
+        <input type="date" required />
+      </div>
+      <div class="form-group checkbox-group">
+        <label
+          ><input type="checkbox" /> Gostaria de receber nossa newsletter</label
+        >
+        <label
+          ><input type="checkbox" /> Aceito a política de privacidade</label
+        >
+      </div>
+      <button class="button" type="submit">Continuar</button>
+    </form>
+  </div>
 
-        <!-- Card de Confirmação de compra -->
-        <div class="card">
-            <div class="confirmation-card">
-                <h2>Confirmação de Compra</h2>
-                <div class="item-row">
-                    <span>Número de artigos:</span>
-                    <span>1</span>
-                </div>
-                <div class="line"></div>
-                <div class="item-row">
-                    <span>Subtotal:</span>
-                    <span>€500,00</span>
-                </div>
-                <div class="line"></div>
-                <div class="item-row">
-                    <span>Envio:</span>
-                    <span>Grátis</span>
-                </div>
-                <div class="line"></div>
-                <div class="total-row">
-                    <span>Total:</span>
-                    <span>€500,00</span>
-                </div>
-            </div>
-        </div>
+  <!-- Card de Confirmação de compra -->
+  <div class="card">
+    <div class="confirmation-card">
+      <h2>Confirmação de Compra</h2>
+      <div class="item-row">
+        <span>Número de artigos:</span>
+        <span>1</span>
+      </div>
+      <div class="line"></div>
+      <div class="item-row">
+        <span>Subtotal:</span>
+        <span>€500,00</span>
+      </div>
+      <div class="line"></div>
+      <div class="item-row">
+        <span>Envio:</span>
+        <span>Grátis</span>
+      </div>
+      <div class="line"></div>
+      <div class="total-row">
+        <span>Total:</span>
+        <span>€500,00</span>
+      </div>
     </div>
-    {% endblock %}
+  </div>
+</div>
+{% endblock %}

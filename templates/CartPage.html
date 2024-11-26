@@ -1,64 +1,64 @@
-
-{%extends "base.html"%}
-
-{%block head%}
+{%extends "base.html"%} {%block head%}
 <link
-rel="stylesheet"
-href="{{url_for('static', filename = 'css/CartPage.css')}}"
+  rel="stylesheet"
+  href="{{url_for('static', filename = 'css/CartPage.css')}}"
 />
-{%endblock%}
-
-{% block content %}
-    <div class="cart-main-content">
-      <div class="cart-items-card">
-        <h2>Carrinho de Compras</h2>
-        <div class="cart-item-list-container">
-          <div class="cart-img-container">
-            <img src="./assets/drumKit.png" />
-          </div>
-          <div class="item-name-price-container">
-            <p>Bateria Pearl Performance P5500</p>
-            <p id="cart-price">500,00 €</p>
-          </div>
-          <div class="cart-qty-selector-container">
-            <input class="cart-qty-selector" type="number" value="1" min="1" />
-          </div>
-          <div class="cart-total-price-container">
-            <h3>500,00 €</h3>
-          </div>
-          <div class="delete-btn-container">
-            <a href="#"><img src="./assets/delete_icon.svg" height="35px" /></a>
-          </div>
-        </div>
+{%endblock%} {% block content %}
+<div class="cart-main-content">
+  <div class="cart-items-card">
+    <h2>Carrinho de Compras</h2>
+    <div class="cart-item-list-container">
+      <div class="cart-img-container">
+        <img src="{{url_for('static', filename = 'images/drumKit.png')}}" />
       </div>
-      <div class="cart-price-details-card">
-        <div class="price-card-first-row">
-          <div class="first-row-item">
-            <p>1 item</p>
-            <p>Envio</p>
-          </div>
-          <div class="first-row-price">
-            <p>500,00 €</p>
-            <p>Grátis</p>
-          </div>
-        </div>
-        <div class="price-card-second-row">
-          <div class="second-row-item">
-            <p>Total (com IVA)</p>
-            <p>Impostos incluídos</p>
-          </div>
-          <div class="second-row-price">
-            <p>500,00 €</p>
-            <p>89,65 €</p>
-          </div>
-        </div>
-        <div class="price-card-third-row">
-          <a href="./404.html">Tem algum código promocional?</a>
-        </div>
-        <div class="price-card-btn-container">
-          <a href="./CompletePurchase.html"><input class="btn-finalizar" type="button" value="Finalizar" /></a>
-        </div>
+      <div class="item-name-price-container">
+        <p>Bateria Pearl Performance P5500</p>
+        <p id="cart-price">500,00 €</p>
+      </div>
+      <div class="cart-qty-selector-container">
+        <input class="cart-qty-selector" type="number" value="1" min="1" />
+      </div>
+      <div class="cart-total-price-container">
+        <h3>500,00 €</h3>
+      </div>
+      <div class="delete-btn-container">
+        <a href="#"
+          ><img
+            src="{{url_for('static', filename = 'icons/delete_icon.svg')}}"
+            height="35px"
+        /></a>
       </div>
     </div>
-    {% endblock %}
-  
+  </div>
+  <div class="cart-price-details-card">
+    <div class="price-card-first-row">
+      <div class="first-row-item">
+        <p>1 item</p>
+        <p>Envio</p>
+      </div>
+      <div class="first-row-price">
+        <p>500,00 €</p>
+        <p>Grátis</p>
+      </div>
+    </div>
+    <div class="price-card-second-row">
+      <div class="second-row-item">
+        <p>Total (com IVA)</p>
+        <p>Impostos incluídos</p>
+      </div>
+      <div class="second-row-price">
+        <p>500,00 €</p>
+        <p>89,65 €</p>
+      </div>
+    </div>
+    <div class="price-card-third-row">
+      <a href="./404.html">Tem algum código promocional?</a>
+    </div>
+    <div class="price-card-btn-container">
+      <a href="/CompletePurchase"
+        ><input class="btn-finalizar" type="button" value="Finalizar"
+      /></a>
+    </div>
+  </div>
+</div>
+{% endblock %}

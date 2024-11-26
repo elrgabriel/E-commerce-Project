@@ -34,7 +34,7 @@ def login():
         print(password)
         if search_user.user_email == email and search_user.user_password == password:
             print("You're are logged in")
-            return redirect(url_for("ProfilePage"))
+            return redirect(url_for("ProfilePage",user_id = search_user.id))
     return render_template('loginPage.html')
 
 @app.route('/register', methods = ["GET", "POST"])
@@ -71,26 +71,35 @@ def register():
                 db.session.add(add_user)
                 db.session.commit()
                 print("Registo Bem Sucedido!")
-                return redirect(url_for("ProfilePage"))
+                registered_user = Users.query.filter_by(user_email = email).first()
+                return redirect(url_for("ProfilePage",user_id = registered_user.id))
             else:
                 print("Email ou password não correspondem.")
         else:
             print("Usuário já registado")
     return render_template('RegistryPage.html')
 
-@app.route('/ProfilePage')
-def ProfilePage():
-    return render_template('ProfilePage.html')
+@app.route('/ProfilePage/<int:user_id>')
+def ProfilePage(user_id):
+    current_user = Users.query.get_or_404(user_id)
+    return render_template('ProfilePage.html', user = current_user)
 
 @app.route('/ProductSingle/<int:product_id>')
 def product_single(product_id):
     product = Products.query.get_or_404(product_id) 
     return render_template('ProductSingle.html', item = product)
 
+@app.route('/Cart')
+def CartPage():
+    return render_template('CartPage.html')
+
+@app.route('/CompletePurchase')
+def CompletePurchase():
+    return render_template('CompletePurchase.html')
+
 
 
 if __name__ == "__main__":
-    
     app.run(debug=True)
 
 
