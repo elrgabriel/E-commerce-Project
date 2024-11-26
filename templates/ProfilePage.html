@@ -1,47 +1,39 @@
-
-    {%extends "base.html"%}
-
-    {%block head%}
-    <link
+{%extends "base.html"%} {%block head%}
+<link
   rel="stylesheet"
   href="{{url_for('static', filename = 'css/ProfilePage.css')}}"
 />
-    {%endblock%}
-    
-    {% block content %}
-    <div class="container">
-        <div class="register-card">
-            <h2>Seus Dados</h2>
-            <form>
-                <div class="form-group">
-                    <label>Nome</label>
-                    <label>Fábio</label>
-                </div>
-                <div class="form-group">
-                    <label>Apelido</label>
-                    <label>Caça Ratos</label>
-                </div>
-                <div class="form-group">
-                    <label>Email</label>
-                    <label>fabiomousehunter@gmail.com</label>
-                </div>
-                <div class="form-group">
-                    <label>Morada</label>
-                    <label>Rua. António Peran Nº1200 Ap.17</label>
-                </div>
-                <div class="form-group">
-                    <label>Distrito</label>
-                    <label>Lisboa</label>
-                </div>
-                <!--Aqui teve que ser GPT pq eu não fazia ideia do design disso aqui-->
-                <a href="index.html"><input class="button" type="button" value="Aceitar" /></a>
-                <!--Aqui teve que ser GPT pq eu não fazia ideia do design disso aqui-->
-                <div class="form-footer">
-                    <p>Voltar a <a href="index.html"> Home</a></p> <!--Campo caso o usuário já tenha conta-->
-                </div>
-            </form>
-        </div>
-    </div>
-    {% endblock %}
- 
-  
+{%endblock%} {% block content %}
+<div class="container">
+  <div class="register-card">
+    <h2>Seus Dados</h2>
+    <form>
+      <div class="form-group">
+        <label id="title">Nome</label>
+        <label>{{user.user_name}}</label>
+      </div>
+      <div class="form-group">
+        <label id="title">Apelido</label>
+        <label>{{user.user_last_name}}</label>
+      </div>
+      <div class="form-group">
+        <label id="title">Email</label>
+        <label>{{user.user_email}}</label>
+      </div>
+      <div class="form-group">
+        <label id="title">Morada</label>
+        <label>{{user.user_address}}</label>
+      </div>
+      <div class="form-group">
+        <label id="title">Distrito</label>
+        <label>{{user.user_district}}</label>
+      </div>
+
+      <div class="form-footer">
+        <p>Voltar a <a href="/home"> Home</a></p>
+        <!--Campo caso o usuário já tenha conta-->
+      </div>
+    </form>
+  </div>
+</div>
+{% endblock %}
