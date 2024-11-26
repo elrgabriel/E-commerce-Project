@@ -87,10 +87,17 @@ def product_single(product_id):
     product = Products.query.get_or_404(product_id) 
     return render_template('ProductSingle.html', item = product)
 
+@app.route('/Cart')
+def CartPage():
+    return render_template('CartPage.html')
+
+@app.route('/CompletePurchase')
+def CompletePurchase():
+    return render_template('CompletePurchase.html')
+
 
 
 if __name__ == "__main__":
-    
     app.run(debug=True)
 
 
