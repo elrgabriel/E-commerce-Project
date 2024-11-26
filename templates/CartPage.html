@@ -9,7 +9,7 @@
     <h2>Carrinho de Compras</h2>
     <div class="cart-item-list-container">
       <div class="cart-img-container">
-        <img src="./assets/drumKit.png" />
+        <img src="{{url_for('static', filename = 'images/drumKit.png')}}" />
       </div>
       <div class="item-name-price-container">
         <p>Bateria Pearl Performance P5500</p>
@@ -22,7 +22,11 @@
         <h3>500,00 €</h3>
       </div>
       <div class="delete-btn-container">
-        <a href="#"><img src="./assets/delete_icon.svg" height="35px" /></a>
+        <a href="#"
+          ><img
+            src="{{url_for('static', filename = 'icons/delete_icon.svg')}}"
+            height="35px"
+        /></a>
       </div>
     </div>
   </div>
