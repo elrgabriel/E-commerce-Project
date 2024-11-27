@@ -16,21 +16,23 @@
     <!-- Header start -->
     <header class="header">
       <div>
-        <img
+        <a href="{{url_for('index')}}">
+          <img
           class="logo"
           src="{{url_for('static', filename = 'icons/music-logo.svg')}}"
           alt="Website logo"
           height="150px"
         />
+        
       </div>
       <!--TODO add hrefs-->
       <nav class="navbar">
-        <a href="/home">Home</a>
-        <a href="/404">Categoria X</a>
-        <a href="/404">Categoria Y</a>
-        <a href="/404">Categoria Z</a>
-        <a href="/Cart">Carrinho</a>
-        <a href="/login">Login</a>
+        <a href="{{url_for('index')}}">Home</a>
+        <a href="{{url_for('error')}}">Categoria X</a>
+        <a href="{{url_for('error')}}">Categoria Y</a>
+        <a href="{{url_for('error')}}">Categoria Z</a>
+        <a href="{{url_for('CartPage')}}">Carrinho</a>
+        <a href="{{url_for('login')}}">Login</a>
       </nav>
     </header>
     <!-- Header End -->
@@ -46,37 +48,37 @@
         </p>
       </div>
       <div class="footer-end">
-        <a href="/404"
+        <a href="{{url_for('error')}}"
           ><img
             src="{{url_for('static', filename = 'icons/facebook_icon.svg')}}"
             alt="facebook logo"
             height="20px"
         /></a>
-        <a href="/404"
+        <a href="{{url_for('error')}}"
           ><img
             src="{{url_for('static', filename = 'icons/twitter_icon.svg')}}"
             alt="twitter logo"
             height="20px"
         /></a>
-        <a href="/404"
+        <a href="{{url_for('error')}}"
           ><img
             src="{{url_for('static', filename = 'icons/instagram_icon.svg')}}"
             alt="instagram logo"
             height="20px"
         /></a>
-        <a href="/404"
+        <a href="{{url_for('error')}}"
           ><img
             src="{{url_for('static', filename = 'icons/linkedin_icon.svg')}}"
             alt="linkedin logo"
             height="20px"
         /></a>
-        <a href="/404"
+        <a href="{{url_for('error')}}"
           ><img
             src="{{url_for('static', filename = 'icons/pinterest_icon.svg')}}"
             alt="pinterest logo"
             height="20px"
         /></a>
-        <a href="/404"
+        <a href="{{url_for('error')}}"
           ><img
             src="{{url_for('static', filename = 'icons/google_icon.svg')}}"
             alt="google logo"
