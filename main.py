@@ -1,4 +1,5 @@
 from flask import Flask, render_template, request,redirect,url_for, flash # type: ignore
+from flask_cors import cross_origin  
 from model import *
 
 
