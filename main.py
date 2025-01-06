@@ -1,4 +1,5 @@
-from flask import Flask, render_template, request,redirect,url_for, flash # type: ignore
+from flask import Flask, render_template, request, redirect, url_for, flash, jsonify  # type: ignore
+from flask_cors import CORS
 from model import *
 
 
@@ -8,6 +9,35 @@ db.init_app(app)
 with app.app_context():
         db.create_all()
 
+# Retornar todos os produtos da base de dados
+@app.route('/api/produtos', methods=['GET'])
+def get_produtos():
+    produtos = Products.query.all()
+    produtos_json = [
+        {
+            'id': produto.id,
+            'product_name': produto.product_name,
+            'product_price': produto.product_price,
+            'product_image': produto.product_image
+        } for produto in produtos
+    ]
+    return jsonify(produtos_json)
+
+# Retornar todos os usuários da base de dados
+@app.route('/api/usuarios', methods=['GET'])
+def get_usuarios():
+    usuarios = Users.query.all()
+    usuarios_json = [
+        {
+            'id': usuario.id,
+            'user_email': usuario.user_email,
+            'user_name': usuario.user_name,
+            'user_last_name': usuario.user_last_name,
+            'user_address': usuario.user_address,
+            'user_district': usuario.user_district
+        } for usuario in usuarios
+    ]
+    return jsonify(usuarios_json)
 
 
 @app.route('/')
