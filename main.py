@@ -5,9 +5,68 @@ from model import *
 
 app = Flask(__name__)
 app.config["SQLALCHEMY_DATABASE_URI"] = "sqlite:///ecommerce.db"
+CORS(app) #Permitir requisições de outros lugares
 db.init_app(app)
 with app.app_context():
         db.create_all()
+
+#Tentativa API e Angular.
+
+@app.route('/api/usuarios', methods=['POST'])
+def api_register_user():
+    data = request.get_json()
+    if not data:
+        return jsonify({'error': 'No JSON data received'}), 400  # Caso não receba dados no formato JSON
+    print(data)
+    email = data.get('email')
+    password = data.get('password')
+    nome = data.get('nome')
+    apelido = data.get('apelido')
+    morada = data.get('morada')
+    distrito = data.get('distrito')
+
+    # Verifique se os campos essenciais estão presentes
+    if not email or not password or not nome or not apelido or not morada or not distrito:
+        return jsonify({'error': 'Todos os campos são obrigatórios'}), 400
+
+    # Verifica se o e-mail já está registrado
+    existing_user = Users.query.filter_by(user_email=email).first()
+    if existing_user:
+        return jsonify({'error': 'Usuário já registrado'}), 400
+
+    # Adiciona o novo usuário ao banco de dados
+    new_user = Users(
+        user_email=email,
+        user_password=password,
+        user_name=nome,
+        user_last_name=apelido,
+        user_address=morada,
+        user_district=distrito
+    )
+    db.session.add(new_user)
+    db.session.commit()
+
+    return jsonify({'message': 'Usuário registrado com sucesso'}), 201
+
+
+
+#Adicionando outro EndPoint para verificar se o usuário já existe.
+@app.route('/api/usuarios/login', methods=['POST'])
+def api_login_user():
+    data = request.json
+    email = data.get('email')
+    password = data.get('password')
+
+    # Procura o usuário pelo e-mail
+    user = Users.query.filter_by(user_email=email).first()
+    if not user or user.user_password != password:
+        return jsonify({'error': 'E-mail ou senha inválidos'}), 401
+
+    # Retorna uma mensagem de sucesso
+    return jsonify({'message': 'Login realizado com sucesso', 'user_id': user.id}), 200
+
+
+#Tentativa API e Angular.
 
 # Retornar todos os produtos da base de dados
 @app.route('/api/produtos', methods=['GET'])
